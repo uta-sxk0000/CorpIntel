@@ -1,10 +1,75 @@
-This section provides a description of your product and defines it's primary features and functions. The purpose is to give the document reader/reviewer enough information about the product to allow them to easily follow the specification of requirements found in the remainder of the document. Your header for this section should introduce the section with a brief statement such as: "This section provides the reader with an overview of X. The primary operational aspects of the product, from the perspective of end users, maintainers and administrators, are defined here. The key features and functions found in the product, as well as critical user interactions and user interfaces are described in detail." Using words, and pictures or graphics where possible, specify the following:
+\section{Product Description}
+
+This section provides an overview of the smart plant monitoring system, including its primary features, functions, and user interactions. The system is designed to monitor plant health using an integrated camera and environmental sensors, and to provide actionable insights through a user interface. From the perspective of end users, the system enables real-time monitoring and feedback. For maintainers and developers, it provides a structured backend for data processing and analysis. The key components, system behavior, and user interactions are described below.
 
 \subsection{Features \& Functions}
-What the product does and does not do. Specify in words what it looks like, referring to a conceptual diagram/graphic (Figure X).  Define the principle parts/components of the product. Specify the elements in the diagram/graphic that are part(s) of this product as well as any associated external elements (e.g., the Internet, an external web server, a GPS satellite, etc.)
+
+The smart plant monitoring system is designed to capture plant images and environmental data, process this information, and provide users with plant health insights.
+
+The system consists of the following core components:
+\begin{itemize}
+    \item \textbf{Camera Module:} Captures images of the plant at regular intervals.
+    \item \textbf{Processing Unit:} Processes captured data and determines plant health status using backend logic.
+    \item \textbf{Backend Server:} Stores data and performs analysis.
+    \item \textbf{User Interface (Dashboard):} Displays plant health status, historical data, and alerts.
+\end{itemize}
+
+The system performs the following functions:
+\begin{itemize}
+    \item Captures plant images automatically
+    \item Processes data to determine plant health status
+    \item Stores data for historical tracking
+    \item Displays results and alerts to the user
+\end{itemize}
+
+The system does \textbf{not} perform the following:
+\begin{itemize}
+    \item It does not physically interact with or modify the plant (no watering or actuation)
+    \item It does not provide medical or agricultural guarantees
+    \item It does not operate outdoors in extreme environmental conditions
+\end{itemize}
+
+External elements include the Internet (for data transfer) and optional cloud storage services.
 
 \subsection{External Inputs \& Outputs}
-Describe critical external data flows. What does your product require/expect to receive from end users or external systems (inputs), and what is expected to be created by your product for consumption by end users or external systems (outputs)? In other words, specify here all data/information to flow into and out of your systems. A table works best here, with rows for each critical data element, and columns for name, description and use.
+
+The system receives input from both users and hardware components, and produces outputs for user interpretation.
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Name} & \textbf{Description} & \textbf{Use} \\
+\hline
+Camera Image & Image of plant captured periodically & Used for plant health analysis \\
+User Input & User settings (e.g., thresholds) & Configures system behavior \\
+\hline
+Health Status & Computed plant condition (e.g., healthy/unhealthy) & Displayed to user \\
+Alerts & Notifications for abnormal conditions & Warns user of issues \\
+Historical Data & Stored past readings and images & Used for tracking trends \\
+\hline
+\end{tabular}
+\end{center}
 
 \subsection{Product Interfaces}
-Specify what all operational (visible) interfaces look like to your end-user, administrator, maintainer, etc. Show sample/mocked-up screen shots, graphics of buttons, panels, etc. Refer to the critical external inputs and outputs described in the paragraph above.
+
+The system provides a user-facing dashboard interface and internal system interfaces.
+
+\textbf{User Interface:}
+\begin{itemize}
+    \item Displays plant health status (e.g., healthy, warning, critical)
+    \item Provides historical graphs of plant conditions
+    \item Displays alerts and notifications
+\end{itemize}
+
+\textbf{Hardware Interface:}
+\begin{itemize}
+    \item Camera connected to processing unit
+    \item Sensors connected via microcontroller (e.g., Arduino or Raspberry Pi)
+\end{itemize}
+
+\textbf{Software Interface:}
+\begin{itemize}
+    \item Backend server processes incoming data
+    \item Communication via APIs between hardware and backend
+    \item Optional cloud database for storage
+\end{itemize}
