@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.18)  20 MAR 2026 16:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.18)  25 MAR 2026 19:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -727,7 +727,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  71i,12n,79p,1012b,505s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb>
-Output written on system_requirements_specification.pdf (18 pages, 147723 bytes).
+Output written on system_requirements_specification.pdf (18 pages, 147810 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  60 compressed objects within 1 object stream
