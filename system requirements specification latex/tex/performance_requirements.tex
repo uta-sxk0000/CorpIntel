@@ -1,22 +1,29 @@
-Include a header paragraph specific to your product here. Performance requirements address items such as: how fast specific critical operations must complete; how long it takes to start/stop activities; how long the battery must last; maximum time it must take to set up; etc.
+%%%Include a header paragraph specific to your product here. Performance requirements address items such as: how fast specific critical operations must complete; how long it takes to start/stop activities; how long the battery must last; maximum time it must take to set up; etc.
 
-\subsection{Requirement Name}
+Preformance requirements for the plant monitor include are reliability of the system, and the speed of scanning, and image processing
+
+\subsection{Reliability}
 \subsubsection{Description}
-Detailed requirement description...
-test 
-Detailed requirement description...
-Detailed requirement description...
-Detailed requirement description...
-Detailed requirement description...
-Detailed requirement description...
-Detailed requirement description...
-Detailed requirement description...
-Detailed requirement description...
+Reliabilty refers to the both image capture and AI detection. The system for the image capture must be able to take consistant pictures of leaves with acceptable quality, lighting, and angle.
+The AI algorithm must detect any signs of disease with high accuracy without triggering false alarms. Every step of image capture and processing must be done without human intervention.
 \subsubsection{Source}
-Source
+Project Charter
 \subsubsection{Constraints}
-Detailed description of applicable constraints...
+Constraints include image quality, lighting quality, and angle of leaves relative to the camera.
 \subsubsection{Standards}
-List of applicable standards
+None
 \subsubsection{Priority}
-Priority
+High
+
+\subsection{Speed}
+\subsubsection{Description}
+Speed refers to the time it take from initializing image capture, to a result sent to the web client. 
+A low time between initialize and result provides a smoother experience for the user and less time when they are unable to physically interact with the plant rack.
+\subsubsection{Source}
+Project Charter
+\subsubsection{Constraints}
+Constraints include processing speed, network speeds, and time for image capturing by the camera rig.
+\subsubsection{Standards}
+None
+\subsubsection{Priority}
+Low
