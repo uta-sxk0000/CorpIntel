@@ -1,32 +1,145 @@
-Include a header paragraph specific to your product here. Customer requirements are those required features and functions specified for and by the intended audience for this product. This section establishes, clearly and concisely, the "look and feel" of the product, what each potential end-user should expect the product do and/or not do. Each requirement specified in this section is associated with a specific customer need that will be satisfied. In general Customer Requirements are the directly observable features and functions of the product that will be encountered by its users. Requirements specified in this section are created with, and must not be changed without, specific agreement of the intended customer/user/sponsor.
+This section defines the customer requirements for Agrihome. Customer requirements are the visible features and functions that the intended users, sponsor, and evaluators expect the system to provide. These requirements describe what end users should expect the product to do during normal operation, what information the product should present, and how the user should interact with the system. Because Agrihome is intended to monitor plant health using image capture, environmental sensing, backend analysis, and a dashboard interface, the requirements in this section focus on observable monitoring behavior, user interaction, alerts, and historical tracking.
 
-\subsection{Requirement Name}
+\subsection{Plant Health Status Display}
 \subsubsection{Description}
-A detailed description of the feature/function that satisfies the requirement. For example: \textit{The GUI background will be slate blue. This specific color is required in order to ensure that the GUI matches other similar software products offered by the customer. Slate blue is specified as \#007FFF, using six-digit hexadecimal color specification.} It is acceptable and advisable to include drawings/graphics in the description if it aids understanding of the requirement.
-\subsubsection{Source}
-The source of the requirement (e.g. customer, sponsor, specified team member (by name), federal regulation, local laws, CSE Senior Design project specifications, etc.)
-\subsubsection{Constraints}
-A detailed description of realistic constraints relevant to this requirement. Economic, environmental, social, political, ethical, health \& safety, manufacturability, and sustainability should be discussed as appropriate.
-\subsubsection{Standards}
-A detailed description of any specific standards that apply to this requirement (e.g. \textit{NSTM standard xx.xxx.x. color specifications \cite{Rubin2012}}. Standards exist for practically everything (ATC standard fuses, IEEE 802.15.4 embedded wireless, TLS 1.3 encryption, etc.), so be sure that you research and document which ones will be followed in meeting this requirement.
-\subsubsection{Priority}
-The priority of this requirement relative to other specified requirements. Use the following priorities:
-\begin{itemize}
-\item Critical (must have or product is a failure)
-\item High (very important to customer acceptance, desirability)
-\item Moderate (should have for proper product functionality);
-\item Low (nice to have, will include if time/resource permits)
-\item Future (not feasible in this version of the product, but should be considered for a future release).
-\end{itemize}
+The system shall provide a user-facing dashboard that displays the current health status of the monitored plant. At minimum, the dashboard shall show a plant health result such as healthy, warning, or critical, along with the latest available monitoring result for the user to review. This requirement ensures that users can directly observe the main output of the product.
 
-\subsection{Requirement Name}
-\subsubsection{Description}
-Detailed requirement description...
 \subsubsection{Source}
-Source
+Project Charter, sponsor expectations, and product description.
+
 \subsubsection{Constraints}
-Detailed description of applicable constraints...
+The dashboard must remain simple enough for non-technical users while still showing meaningful monitoring results. The design is constrained by available frontend development time and prototype scope.
+
 \subsubsection{Standards}
-List of applicable standards
+The interface should follow common dashboard usability and readability practices for software systems.
+
 \subsubsection{Priority}
-Priority
+Critical
+
+\subsection{Automatic Image Capture}
+\subsubsection{Description}
+The system shall automatically capture plant images at regular intervals for monitoring purposes. This requirement supports the main product goal of reducing the need for constant manual inspection by the user.
+
+\subsubsection{Source}
+Product description and project concept.
+
+\subsubsection{Constraints}
+Image capture reliability depends on camera hardware, lighting conditions, plant position, and available processing and storage resources.
+
+\subsubsection{Standards}
+The image capture process should follow normal hardware operating specifications provided by the selected camera manufacturer.
+
+\subsubsection{Priority}
+Critical
+
+\subsection{Environmental Data Collection}
+\subsubsection{Description}
+The system shall collect environmental sensor data associated with plant monitoring when sensors are available. This data may include measurements such as temperature, humidity, soil moisture, or related environmental conditions used by the system for monitoring and analysis.
+
+\subsubsection{Source}
+Product description and hardware interface requirements.
+
+\subsubsection{Constraints}
+This requirement depends on successful sensor integration, calibration, and communication with the processing unit. Sensor quality and hardware cost may affect the completeness and accuracy of collected data.
+
+\subsubsection{Standards}
+Sensor components should follow manufacturer specifications and standard embedded sensor interfacing practices.
+
+\subsubsection{Priority}
+High
+
+\subsection{Alert Display}
+\subsubsection{Description}
+The system shall display alerts or notifications when abnormal plant conditions are detected. Alerts shall be visible to the user through the dashboard and shall indicate that the plant may require attention.
+
+\subsubsection{Source}
+Product description, customer need, and sponsor expectations.
+
+\subsubsection{Constraints}
+Alert usefulness depends on the quality of captured images, sensor readings, and analysis results. Excessive false alerts may reduce user trust in the system.
+
+\subsubsection{Standards}
+The alert system should follow general software notification practices for clear wording and visible warning presentation.
+
+\subsubsection{Priority}
+Critical
+
+\subsection{Historical Data Display}
+\subsubsection{Description}
+The system shall allow the user to review historical monitoring data, including past readings and captured images when available. This feature shall support tracking changes in plant condition over time.
+
+\subsubsection{Source}
+Product description and intended user needs.
+
+\subsubsection{Constraints}
+History depth may be limited by storage capacity, image size, monitoring frequency, and database design choices within the prototype.
+
+\subsubsection{Standards}
+Stored monitoring data should follow standard timestamping and record consistency practices for software systems.
+
+\subsubsection{Priority}
+High
+
+\subsection{User Settings Input}
+\subsubsection{Description}
+The system shall accept user input for configuration settings such as monitoring thresholds or related behavior settings. This requirement allows the user to adjust the system to better match specific monitoring preferences or plant conditions.
+
+\subsubsection{Source}
+Product description and expected user interaction.
+
+\subsubsection{Constraints}
+The number of configurable options may be limited by implementation time, user interface simplicity, and backend support for settings management.
+
+\subsubsection{Standards}
+User configuration features should follow common software input validation and settings management practices.
+
+\subsubsection{Priority}
+High
+
+\subsection{Dashboard Interface}
+\subsubsection{Description}
+The system shall provide a dashboard-based user interface through which users can view plant health status, alerts, and historical monitoring information. This dashboard shall serve as the primary interaction point between the user and the system.
+
+\subsubsection{Source}
+Product description and project design goals.
+
+\subsubsection{Constraints}
+Interface complexity must be limited enough to remain understandable to non-expert users. Time and frontend development resources may limit visual polish in the prototype.
+
+\subsubsection{Standards}
+The interface should follow standard usability and readability practices for browser-based dashboard systems.
+
+\subsubsection{Priority}
+Critical
+
+\subsection{No Physical Plant Actuation}
+\subsubsection{Description}
+The system shall not physically interact with or modify the plant. The product shall not perform watering, spraying, fertilizing, or any other automatic physical actuation on the plant. This requirement clearly defines the scope of the prototype as a monitoring and analysis system only.
+
+\subsubsection{Source}
+Product description and project scope definition.
+
+\subsubsection{Constraints}
+This requirement limits the system to sensing, processing, storage, and display functions only. Any future physical automation would require additional hardware, controls, and safety considerations.
+
+\subsubsection{Standards}
+The requirement follows the documented functional scope of the prototype system.
+
+\subsubsection{Priority}
+Critical
+
+\subsection{Remote Notification Support}
+\subsubsection{Description}
+In a future version, the system should support remote notification delivery such as email, mobile push notification, or text message when abnormal plant conditions are detected. This would allow users to receive alerts even when not actively viewing the dashboard.
+
+\subsubsection{Source}
+Future customer convenience needs and product expansion goals.
+
+\subsubsection{Constraints}
+This feature would require additional backend services, notification platform integration, secure internet communication, and user account support. It may not be feasible within the current prototype scope.
+
+\subsubsection{Standards}
+Future implementations should follow secure communication practices and standard authentication methods.
+
+\subsubsection{Priority}
+Future
