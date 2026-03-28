@@ -1,18 +1,16 @@
-Include a header paragraph specific to your product here. Maintenance and support requirements address items specific to the ongoing maintenance and support of your product after delivery. Think of these requirements as if you were the ones who would be responsible for caring for customers/end user after the product is delivered in its final form and in use "in the field". What would you require to do this job? Specify items such as: where, how and who must be able to maintain the product to correct errors, hardware failures, etc.; required support/troubleshooting manuals/guides; availability/documentation of source code; related technical documentation that must be available for maintainers; specific/unique tools required for maintenance; specific software/environment required for maintenance; etc.
 
-\section{Maintenance Requirements}
 
-This section defines the maintenance and support requirements for the Agrihome smart plant monitoring system after deployment. Maintenance requirements ensure that the system can be updated, repaired, and supported over time to maintain reliability and usability. These requirements address hardware servicing, software updates, troubleshooting procedures, documentation availability, and system support responsibilities. The goal is to ensure that both developers and users can effectively maintain system operation and resolve issues when they arise.
+This section defines the maintenance and support requirements for the Agrihome smart plant monitoring system after deployment. The system consists of a camera module, processing unit, and backend software used to analyze plant images and provide health insights. Maintenance requirements ensure that the system remains reliable, updatable, and easy to troubleshoot over time. These requirements address software updates, hardware servicing, system monitoring, and documentation to support both developers and end users in maintaining proper system operation.
 
 \subsection{System Maintenance Documentation}
 \subsubsection{Description}
-The system shall provide complete maintenance documentation including setup guides, troubleshooting instructions, and system architecture details. This documentation shall allow developers and maintainers to understand system components, diagnose issues, and perform updates or repairs efficiently.
+The system shall provide comprehensive maintenance documentation, including installation guides, system architecture descriptions, and troubleshooting procedures. This documentation shall enable developers and maintainers to understand system behavior, diagnose issues, and perform updates or repairs efficiently.
 
 \subsubsection{Source}
 Project design requirements and maintainability best practices.
 
 \subsubsection{Constraints}
-Documentation must be kept updated as system changes occur. Limited development time may restrict the level of detail included in the initial version.
+Documentation must be updated as system changes occur. Limited development time may restrict the level of detail in the initial release.
 
 \subsubsection{Standards}
 Documentation should follow standard software engineering documentation practices.
@@ -23,13 +21,13 @@ High
 
 \subsection{Hardware Maintenance and Replacement}
 \subsubsection{Description}
-The system shall allow easy access to hardware components such as the camera module, sensors, and processing unit for repair or replacement. Components should be replaceable without requiring complete system disassembly.
+The system shall allow easy access to hardware components such as the camera module and processing unit for repair or replacement. Components should be modular and replaceable without requiring complete system disassembly.
 
 \subsubsection{Source}
 Hardware design considerations and user maintenance needs.
 
 \subsubsection{Constraints}
-Physical design limitations and mounting structure may restrict accessibility. Replacement parts must be compatible with the system.
+Physical design and mounting structure may limit accessibility. Replacement components must be compatible with the system.
 
 \subsubsection{Standards}
 Hardware components should follow manufacturer specifications and safe handling practices.
@@ -40,16 +38,16 @@ Critical
 
 \subsection{Software Updates and Bug Fixes}
 \subsubsection{Description}
-The system shall support software updates to fix bugs, improve performance, and enhance features. Updates should be deployable without requiring complete system reinstallation.
+The system shall support software updates to fix bugs, improve performance, and enhance functionality. Updates should be deployable without requiring complete system reinstallation.
 
 \subsubsection{Source}
 Software lifecycle management requirements.
 
 \subsubsection{Constraints}
-Update process depends on network availability and system configuration. Improper updates may affect system stability.
+Update process may depend on network availability. Improper updates may impact system stability.
 
 \subsubsection{Standards}
-Software updates should follow standard version control and deployment practices.
+Software updates should follow version control and deployment best practices.
 
 \subsubsection{Priority}
 Critical
@@ -57,16 +55,16 @@ Critical
 
 \subsection{System Monitoring and Error Logging}
 \subsubsection{Description}
-The system shall maintain logs of system activity, errors, and failures to assist in troubleshooting and maintenance. Logs should include timestamps and relevant system events.
+The system shall maintain logs of system activity, errors, and failures to assist in troubleshooting. Logs should include timestamps and relevant system events to help diagnose issues efficiently.
 
 \subsubsection{Source}
 System reliability and debugging requirements.
 
 \subsubsection{Constraints}
-Storage limitations may restrict the amount of log data retained. Logging must not significantly affect system performance.
+Storage limitations may restrict log retention. Logging must not significantly degrade system performance.
 
 \subsubsection{Standards}
-Logging should follow common software debugging and monitoring practices.
+Logging should follow common software monitoring and debugging practices.
 
 \subsubsection{Priority}
 High
@@ -74,13 +72,13 @@ High
 
 \subsection{Technical Support Availability}
 \subsubsection{Description}
-The system shall provide access to technical support resources such as user guides, FAQs, or developer support documentation to assist users in resolving issues.
+The system shall provide access to support resources such as user guides, FAQs, and developer documentation to assist users in resolving issues and understanding system functionality.
 
 \subsubsection{Source}
 Customer support and usability requirements.
 
 \subsubsection{Constraints}
-Support availability may be limited based on development team resources. Real-time support may not be feasible in the prototype stage.
+Support availability may be limited due to team size. Real-time support may not be feasible in the prototype phase.
 
 \subsubsection{Standards}
 Support materials should follow standard customer support documentation practices.

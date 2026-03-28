@@ -1,15 +1,87 @@
-Include a header paragraph specific to your product here. In this section specify any requirements
-related to information security or privacy. This may include items such as encryption standards, data
-storage procedures, authentication, password strength, etc.
 
-\subsection{Requirement Name}
+
+This section defines the security and privacy requirements for the Agrihome smart plant monitoring system. The system captures plant images using a camera and processes data through a backend system. Security requirements focus on protecting user data, ensuring secure communication between system components, and preventing unauthorized access. These requirements aim to maintain data integrity, confidentiality, and system reliability.
+
+\subsection{User Authentication}
 \subsubsection{Description}
-Detailed requirement description...
+The system shall require user authentication to access the dashboard and system data. Users must log in using secure credentials before accessing plant monitoring information.
+
 \subsubsection{Source}
-Source
+System security and user access control requirements.
+
 \subsubsection{Constraints}
-Detailed description of applicable constraints...
+Authentication mechanisms must remain simple for usability while maintaining adequate security.
+
 \subsubsection{Standards}
-List of applicable standards
+Standard authentication practices (e.g., secure login protocols).
+
 \subsubsection{Priority}
-Priority
+Critical
+
+
+\subsection{Data Encryption}
+\subsubsection{Description}
+All data transmitted between the camera system, backend server, and user interface shall be encrypted to prevent unauthorized interception. Sensitive data must not be transmitted in plain text.
+
+\subsubsection{Source}
+Data protection and privacy requirements.
+
+\subsubsection{Constraints}
+Encryption methods must balance security with system performance.
+
+\subsubsection{Standards}
+TLS (Transport Layer Security) for secure data transmission.
+
+\subsubsection{Priority}
+Critical
+
+
+\subsection{Secure Data Storage}
+\subsubsection{Description}
+Stored data, including plant images and system logs, shall be protected against unauthorized access. Access to stored data must be restricted to authorized users only.
+
+\subsubsection{Source}
+Data privacy and system security requirements.
+
+\subsubsection{Constraints}
+Storage solutions must be efficient while maintaining security controls.
+
+\subsubsection{Standards}
+Secure data storage best practices.
+
+\subsubsection{Priority}
+High
+
+
+\subsection{Access Control}
+\subsubsection{Description}
+The system shall implement role-based or user-based access control to restrict system functionality and data access to authorized users only.
+
+\subsubsection{Source}
+System design and security requirements.
+
+\subsubsection{Constraints}
+Access control must not overly complicate user experience.
+
+\subsubsection{Standards}
+Access control and authorization best practices.
+
+\subsubsection{Priority}
+High
+
+
+\subsection{System Integrity and Protection}
+\subsubsection{Description}
+The system shall protect against unauthorized modifications, tampering, or malicious activity. Only authorized updates and changes to the system shall be allowed.
+
+\subsubsection{Source}
+System reliability and security requirements.
+
+\subsubsection{Constraints}
+Security measures must not significantly impact system performance.
+
+\subsubsection{Standards}
+General cybersecurity best practices.
+
+\subsubsection{Priority}
+High

@@ -1,13 +1,87 @@
-Include a header paragraph specific to your product here. In this section specify anything else that is required for the product to be deemed complete. Include requirements related to customer setup and configuration if not specified in a previous requirement. Add any known requirements related to product architecture/design, such as modularity, extensibility (for future enhancements), or adaptation for a specific programming language. Consider requirements such as portability of your source code to various platforms (Windows, Linux, Unix Mac OS, etc.).
 
-\subsection{Requirement Name}
+
+This section defines additional requirements necessary for the Agrihome smart plant monitoring system to be considered complete. These requirements focus on system setup, configuration, architecture, portability, and extensibility. The system is designed as a camera-based monitoring solution with backend processing, and must be easy to deploy, adaptable for future enhancements, and maintainable across different platforms and environments.
+
+\subsection{System Setup and Configuration}
 \subsubsection{Description}
-Detailed requirement description...
+The system shall provide a simple setup process that allows users to install and configure the camera module and software components with minimal technical expertise. Initial configuration shall include connecting the camera, setting up the backend system, and defining basic user preferences.
+
 \subsubsection{Source}
-Source
+User usability requirements and deployment considerations.
+
 \subsubsection{Constraints}
-Detailed description of applicable constraints...
+Setup complexity must be minimized. Users may have limited technical knowledge, which restricts complex configuration steps.
+
 \subsubsection{Standards}
-List of applicable standards
+General usability and installation best practices.
+
 \subsubsection{Priority}
-Priority
+High
+
+
+\subsection{System Modularity}
+\subsubsection{Description}
+The system shall be designed in a modular architecture, separating the camera module, backend processing, and user interface components. This modularity will allow individual components to be modified or replaced without affecting the entire system.
+
+\subsubsection{Source}
+Software architecture and design requirements.
+
+\subsubsection{Constraints}
+Modular design may increase initial development complexity and require clear interface definitions.
+
+\subsubsection{Standards}
+Modular software design principles.
+
+\subsubsection{Priority}
+High
+
+
+\subsection{System Extensibility}
+\subsubsection{Description}
+The system shall be designed to support future enhancements, such as integration of additional features like advanced analytics or external services. The architecture should allow new components to be added with minimal modification to existing code.
+
+\subsubsection{Source}
+Future scalability and system evolution requirements.
+
+\subsubsection{Constraints}
+Extensibility must be balanced with simplicity in the current prototype.
+
+\subsubsection{Standards}
+Software extensibility and scalability best practices.
+
+\subsubsection{Priority}
+Moderate
+
+
+\subsection{Platform Compatibility}
+\subsubsection{Description}
+The system shall be compatible with multiple operating systems, including Windows, Linux, and macOS, to ensure accessibility for different users and developers.
+
+\subsubsection{Source}
+Portability and user accessibility requirements.
+
+\subsubsection{Constraints}
+Differences in operating systems may require additional configuration and testing.
+
+\subsubsection{Standards}
+Cross-platform development standards.
+
+\subsubsection{Priority}
+High
+
+
+\subsection{Programming Language and Environment}
+\subsubsection{Description}
+The system shall be developed using standard programming languages and tools suitable for image processing and backend development (e.g., Python or Java). The development environment shall support maintainability and scalability.
+
+\subsubsection{Source}
+Project technical design decisions.
+
+\subsubsection{Constraints}
+Choice of language must align with team expertise and available resources.
+
+\subsubsection{Standards}
+Industry-standard programming practices and development tools.
+
+\subsubsection{Priority}
+High
